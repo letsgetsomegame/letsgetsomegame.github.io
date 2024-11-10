@@ -1,59 +1,16 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <link rel="stylesheet" href="./style.css" />
-    <link rel="icon" type="./icon.png" href="/favicon.ico" />
-    <title>about:blank | 3kh0</title>
-  </head>
-  <body>
-    <h1>For anyone wondering, this can unblock most sites, including purepro, 1v1.lol, and deadshot.to continue to games, you can go to the link that will soon be provided. There have beed issues with githubs TOS, and a lot of the websites were deeleted, and I am working on a fix.</h1>
-    <p>to turn of securely, go to this link:</p>
-    <a href="./home"><img src="./icon.png" length="100" width="100"><br>Click Me</a>
-    <div class="console-container">
-      <div class="console">
-        <h1>about:blank</h1>
-        <div class="consolebody">
-          <p>Enter a URL you want to be opened in a about:blank page below:</p>
-          <p class="console-input"><input id="url-target" value="" autocomplete="on" type="text" autofocus /></p>
-          <p>Please make sure you have the https:// on the URL, it is best to just copy the link from the actual search bar!</p>
-        </div>
-      </div>
-      <div class="button-wrapper">
-        <button id="create" class="console-button">Create page</button>
-        <button class="console-button" onclick="document.getElementById('url-target').value = ''">Clear input</button>
-      </div>
-     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8868466169207014"
-     crossorigin="anonymous"></script>
-      <p class="credit">Made by 3kh0, come visit my <a href="https://3kh0.github.io">website</a>.</p>
-      <button onclick="alert('Hello there!\n\nIf you clicked then you are wondering what this is, I can explain. So at our school, teachers have this tool called Dyknow that can screenshot the contents of the page and use it so the teacher knows what we are doing, by embedding a page into a system page (about:blank is counted as a system page), Dyknow can not screenshot or even tell the teacher what we are on! This will not unblock things but it is a start!');">What is this?</button>
-    </div>
-    <p>Credit for this tool goes to 3KH0. their games site is located at 3kh0.github.io</p>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open Tabs Example</title>
     <script>
-      var url = document.getElementById("url-target");
-      var urlObj = new window.URL(window.location.href);
-      document.getElementById("create").onclick = function () {
-        if (url.value.substring(0, 8) !== 'https://' && url.value.substring(0, 7) !== 'http://') {
-    		url.value = 'https://' + url.value.split('https://').pop();
-        } else if (url.value.substring(0, 7) == 'http://'){
-        	url.value = 'https://' + url.value.split('http://').pop();
-        };
-        win = window.open();
-        win.document.body.style.margin = "0";
-        win.document.body.style.height = "100vh";
-        var iframe = win.document.createElement("iframe");
-        iframe.style.border = "none";
-        iframe.style.width = "100%";
-        iframe.style.height = "100%";
-        iframe.style.margin = "0";
-        iframe.referrerpolicy = "no-referrer";
-        iframe.allow = "fullscreen";
-        iframe.src = url.value;
-        win.document.body.appendChild(iframe);
-        var script = win.document.createElement("script");
-        script.src = "https://3kh0.github.io/js/main.js";
-        win.document.body.appendChild(script);
-      };
+        // Function to open two new tabs with the specified URL
+        function openTabs() {
+            window.open('https://letsgetsomegame.com', '_blank');
+            window.open('https://letsgetsomegame.com', '_blank');
+        }
+
+        // Trigger the function when the page loads
+        window.onload = openTabs;
     </script>
-    <script src="/js/main.js"></script>
-  </body>
-</html>
